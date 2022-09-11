@@ -25,6 +25,24 @@ public class ContainerWithMostWater {
      * @return the maximum area of water that can be contained by any two such vertical lines.
      */
     public static int maxArea(int[] height) {
-        return -1;
+
+        int start = 0;
+        int end = height.length - 1;
+        int maxArea = 0;
+
+        while (start < end) {
+            int width = end - start;
+            int cHeight = Math.min(height[start], height[end]);
+            int currentArea = width * cHeight;
+            maxArea = Math.max(maxArea, currentArea);
+            if (height[start] < height[end]) {
+                start++;
+            } else {
+                end--;
+            }
+        }
+
+        return maxArea;
+
     }
 }
