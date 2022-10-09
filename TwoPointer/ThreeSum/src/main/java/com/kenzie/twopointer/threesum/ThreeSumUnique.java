@@ -20,6 +20,7 @@ public class ThreeSumUnique {
      * @param nums an unsorted integer array where each element is unique.
      * @return all triplets that sum to 0
      */
+    //this is threeSum
     public static List<List<Integer>> threeSum(int[] nums) {
 
         // Sort the array first so that we can discard parts of the problem.
