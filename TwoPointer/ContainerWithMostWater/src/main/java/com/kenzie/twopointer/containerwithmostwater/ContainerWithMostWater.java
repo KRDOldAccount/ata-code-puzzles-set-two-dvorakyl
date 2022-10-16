@@ -3,6 +3,9 @@ package com.kenzie.twopointer.containerwithmostwater;
 /**
  * Contains a problem that can be solved using the Two-Pointer Technique.
  */
+
+//COLLABORATED WITH DARRIAN COLLIER
+
 public class ContainerWithMostWater {
     /**
      * Given a non-negative int array height, where the array index represents the x-axis coordinate, and the array
@@ -25,6 +28,24 @@ public class ContainerWithMostWater {
      * @return the maximum area of water that can be contained by any two such vertical lines.
      */
     public static int maxArea(int[] height) {
-        return -1;
+
+        int start = 0;
+        int end = height.length - 1;
+        int maxArea = 0;
+
+        while (start < end) {
+            int width = end - start;
+            int cHeight = Math.min(height[start], height[end]);
+            int currentArea = width * cHeight;
+            maxArea = Math.max(maxArea, currentArea);
+            if (height[start] < height[end]) {
+                start++;
+            } else {
+                end--;
+            }
+        }
+
+        return maxArea;
+
     }
 }

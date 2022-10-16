@@ -5,6 +5,9 @@ import java.util.List;
 /**
  * Contains a problem that can be solved using the Sliding Window Technique.
  */
+
+//COLLABORATED WITH DARRIAN COLLIER
+
 public class MinimumSumSubset {
 
     /**
@@ -23,8 +26,22 @@ public class MinimumSumSubset {
      */
     public static int findMinimumSum(List<Integer> input, int k) {
         // TODO: Implement an algorithm that utilizes the sliding window technique
+        int windowSum = 0;
+        for (int i = 0; i < k; i++) {
+            windowSum += input.get(i);
+        }
 
-        return -1;
+        int minSum = windowSum;
+        for (int right = k; right < input.size(); right++) {
+            windowSum -= input.get(right - k);
+            windowSum += input.get(right);
+
+            minSum = Math.min(minSum, windowSum);
+        }
+
+        return minSum;
+
+
     }
 
 }
