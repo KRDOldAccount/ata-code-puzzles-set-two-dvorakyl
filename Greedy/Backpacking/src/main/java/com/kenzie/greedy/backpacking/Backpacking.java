@@ -7,6 +7,9 @@ import java.util.List;
 /**
  * Contains a problem that can be solved using the Greedy Technique.
  */
+
+//COLLABORATED WITH DARRIAN COLLIER
+
 public class Backpacking {
 
     /**

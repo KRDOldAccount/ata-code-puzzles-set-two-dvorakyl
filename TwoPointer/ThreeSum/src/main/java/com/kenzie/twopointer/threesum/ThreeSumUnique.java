@@ -8,6 +8,9 @@ import java.util.List;
 /**
  * Contains a problem that can be solved using the Two-Pointer Technique.
  */
+
+//COLLABORATED WITH DARRIAN COLLIER
+
 public class ThreeSumUnique {
     /**
      * Given an unsorted integer array nums, where each element is unique, return all the triplets

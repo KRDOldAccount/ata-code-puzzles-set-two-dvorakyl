@@ -3,6 +3,9 @@ package com.kenzie.twopointer.containerwithmostwater;
 /**
  * Contains a problem that can be solved using the Two-Pointer Technique.
  */
+
+//COLLABORATED WITH DARRIAN COLLIER
+
 public class ContainerWithMostWater {
     /**
      * Given a non-negative int array height, where the array index represents the x-axis coordinate, and the array
